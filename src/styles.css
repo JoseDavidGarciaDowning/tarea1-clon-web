@@ -1,5 +1,5 @@
 :root {
-  /* Variables de CSS obligatorias */
+  /* Variables de CSS  */
   --color-bg: #fdfdfd;
   --color-text-main: #333333;
   --color-text-light: #777777;
@@ -344,7 +344,7 @@ h1, h2, h3, h4 {
   font-size: 0.95rem;
 }
 
-/* Comentario de especificidad (REQUISITO CUMPLIDO) */
+/* Comentario de especificidad */
 /* Uso este selector más específico para quitar el borde del último elemento de la lista en categorías y evitar una doble línea al final */
 .widget.categories ul li:last-child {
   border-bottom: none;
