@@ -62,9 +62,7 @@ h1, h2, h3, h4 {
 
 /* Ocultar header visiblemente pero mantener la semántica */
 .site-header {
-  padding: var(--spacing-md);
-  text-align: center;
-  display: none; /* Según el diseño no hay header, pero lo ocultamos aquí si no se necesita visible */
+  display: none; 
 }
 
 /* ==============================================================
@@ -89,20 +87,19 @@ h1, h2, h3, h4 {
   gap: var(--spacing-xl);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .content-layout {
     grid-template-columns: 1fr;
   }
 }
 
 /* ==============================================================
-   3. COMPONENTES: Tarjetas y Badges
+   3. COMPONENTES: Tarjetas Top
    ============================================================== */
 .card {
   position: relative;
   border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
 }
 
@@ -156,3 +153,181 @@ h1, h2, h3, h4 {
 .category-lifestyle { background-color: var(--color-lifestyle); }
 .category-health { background-color: var(--color-health); }
 .category-gaming { background-color: var(--color-gaming); }
+
+/* ==============================================================
+   4. FEED (Izquierda)
+   ============================================================== */
+.featured-card {
+  margin-bottom: var(--spacing-xl);
+}
+
+.featured-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-md);
+}
+
+.category-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text-travel { color: var(--color-travel); }
+
+.featured-card h2 {
+  font-size: 2rem;
+  margin: var(--spacing-sm) 0;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.excerpt {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.95rem;
+}
+
+.read-more {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  border-bottom: 1px solid var(--color-text-light);
+  padding-bottom: 2px;
+}
+.read-more:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.sub-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.sub-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-md);
+}
+
+.sub-card h3 {
+  font-size: 1.1rem;
+}
+
+/* ==============================================================
+   5. SIDEBAR (Derecha)
+   ============================================================== */
+.widget {
+  margin-bottom: var(--spacing-xl);
+}
+
+.widget h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-md);
+}
+
+/* --- Newsletter --- */
+.newsletter {
+  background-color: #f9f9f9;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.newsletter p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+  font-style: italic;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: var(--spacing-md);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.newsletter-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #333;
+}
+
+/* --- Categorías --- */
+.categories ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid #eee;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+/* Comentario de especificidad (REQUISITO CUMPLIDO) */
+/* Uso este selector más específico para quitar el borde del último elemento de la lista en categorías y evitar una doble línea al final */
+.widget.categories ul li:last-child {
+  border-bottom: none;
+}
+
+.categories ul li a:hover {
+  color: var(--color-accent);
+}
+
+/* --- Posts Recientes --- */
+.recent-posts ul li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.recent-posts img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.recent-posts .post-info h4 {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  font-family: var(--font-body);
+}
+
+.recent-posts .post-info p {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+.site-footer {
+  text-align: center;
+  padding: var(--spacing-lg);
+  color: var(--color-text-light);
+  border-top: 1px solid #eee;
+  margin-top: var(--spacing-xl);
+}
