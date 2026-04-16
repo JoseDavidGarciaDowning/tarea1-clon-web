@@ -172,19 +172,32 @@ h1, h2, h3, h4 {
 }
 
 .badge {
+  position: relative;
   display: inline-block;
-  padding: 4px 10px;
-  border-radius: 4px;
+  padding: 4px 12px;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: var(--spacing-sm);
   color: #fff;
+  z-index: 1;
 }
 
-.category-lifestyle { background-color: var(--color-lifestyle); }
-.category-health { background-color: var(--color-health); }
-.category-gaming { background-color: var(--color-gaming); }
+.badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: skewX(-10deg);
+  border-radius: 2px;
+  z-index: -1;
+}
+
+.category-lifestyle::before { background-color: var(--color-lifestyle); }
+.category-health::before { background-color: var(--color-health); }
+.category-gaming::before { background-color: var(--color-gaming); }
 
 /* ==============================================================
    4. FEED (Izquierda)
