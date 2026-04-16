@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Clon Web</title>
+    <!-- Fuente externa: Playfair Display para títulos, Inter para textos -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <h1 class="logo">Blog Clon</h1>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Viajes</a></li>
+                <li><a href="#">Estilo de vida</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Top 3 cards -->
+        <section class="top-cards">
+            <article class="card hero-card">
+                <img src="./img/card1.jpg" alt="Montaña y río">
+                <div class="card-content">
+                    <span class="badge category-lifestyle">LIFESTYLE</span>
+                    <h2>The Most Popular Places to Visit in the World</h2>
+                    <p class="author">Top Places</p>
+                </div>
+            </article>
+            <article class="card hero-card">
+                <img src="./img/card2.jpg" alt="Yoga y salud">
+                <div class="card-content">
+                    <span class="badge category-health">HEALTH</span>
+                    <h2>Does Exercise Help with your Productivity</h2>
+                    <p class="author">Health Chat</p>
+                </div>
+            </article>
+            <article class="card hero-card">
+                <img src="./img/card3.jpg" alt="Control de videojuegos">
+                <div class="card-content">
+                    <span class="badge category-gaming">GAMING</span>
+                    <h2>Can Playing Video Games Help Reduce Stress?</h2>
+                    <p class="author">Gamer Play</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="content-layout">
+            <!-- Columna principal (Izquierda) -->
+            <section class="feed">
+                <!-- Tarjeta destacada -->
+                <article class="featured-card">
+                    <img src="./img/featured.jpg" alt="Lago en las montañas">
+                    <span class="category-text text-travel">TRAVEL</span>
+                    <h2>Where to Visit on Your Next Vacation</h2>
+                    <p class="meta">Written by Jane Doe on December 02, 2019</p>
+                    <p class="excerpt">There are thousands of places you can visit on your next vacation. In this post we'll show you the top destinations to consider for your next adventure...</p>
+                    <a href="#" class="read-more">Continue Reading &nearr;</a>
+                </article>
+
+                <!-- Cuadrícula 2x2 de artículos secundarios -->
+                <section class="sub-articles">
+                    <article class="sub-card">
+                        <img src="./img/sub1.jpg" alt="Amigos en la playa">
+                        <h3>Time for the Beach and Friends</h3>
+                        <p class="excerpt">Many people live so close to amazing scenery, yet they rarely take...</p>
+                        <a href="#" class="read-more">Continue Reading &nearr;</a>
+                    </article>
+                    <article class="sub-card">
+                        <img src="./img/sub2.jpg" alt="Camino bajo cielo estrellado">
+                        <h3>Are you Ready for an Experience?</h3>
+                        <p class="excerpt">Check out these awesome places you'll want to visit as you set your...</p>
+                        <a href="#" class="read-more">Continue Reading &nearr;</a>
+                    </article>
+                    <article class="sub-card">
+                        <img src="./img/sub3.jpg" alt="Niños jugando en el bosque">
+                        <h3>Take Me Back in Time</h3>
+                        <p class="excerpt">How nice would that be to go back in time and enjoy the youth...</p>
+                        <a href="#" class="read-more">Continue Reading &nearr;</a>
+                    </article>
+                    <article class="sub-card">
+                        <img src="./img/sub4.jpg" alt="Hombre entrenando en gimnasio">
+                        <h3>Here are the Best Ways to Train</h3>
+                        <p class="excerpt">Learn about the best ways to train to get the most of your workout...</p>
+                        <a href="#" class="read-more">Continue Reading &nearr;</a>
+                    </article>
+                </section>
+            </section>
+
+            <!-- Barra lateral (Derecha) -->
+            <aside class="sidebar">
+                <!-- Widget Formulario Newsletter -->
+                <section class="widget newsletter">
+                    <h3>Subscribe to our Newsletter</h3>
+                    <p>No Spam. Only one email per week.</p>
+                    <form action="#" method="POST" class="newsletter-form">
+                        <input type="text" placeholder="First Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+                </section>
+
+                <!-- Widget Categorías -->
+                <section class="widget categories">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Lifestyle</a> <span>32</span></li>
+                        <li><a href="#">Health</a> <span>41</span></li>
+                        <li><a href="#">Gaming</a> <span>27</span></li>
+                        <li><a href="#">Travel</a> <span>21</span></li>
+                        <li><a href="#">Food</a> <span>15</span></li>
+                        <li><a href="#">Business</a> <span>28</span></li>
+                    </ul>
+                </section>
+
+                <!-- Widget Post Recientes -->
+                <section class="widget recent-posts">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        <li>
+                            <img src="./img/recent1.jpg" alt="Montaña verde">
+                            <div class="post-info">
+                                <h4>Top Destinations to Visit in the World</h4>
+                                <p>January 02, 2021</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/recent2.jpg" alt="Jugador RV">
+                            <div class="post-info">
+                                <h4>Experience the Future of the 3d Gaming Experience</h4>
+                                <p>January 04, 2021</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./img/recent3.jpg" alt="Viaje al fin del mundo">
+                            <div class="post-info">
+                                <h4>Take a Trip to The End of The World</h4>
+                                <p>January 05, 2021</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+        </section>
+    </main>
+
+    <!-- <footer class="site-footer">
+        <p>&copy; 2024 Blog Web. Clon para la Tarea 1 de Multimedios.</p>
+    </footer> -->
+</body>
+</html>
